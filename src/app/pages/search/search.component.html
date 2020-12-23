@@ -29,7 +29,7 @@
                 </div>
             </div>
             
-            <div class="search_gender_container">
+            <div *ngIf="searchByGender_container == true" class="search_gender_container">
                 <div class="control_page">
                     <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
                     <button class="back_page push" (click)="nextPage()">NEXT<i class="fas fa-chevron-right"></i></button>

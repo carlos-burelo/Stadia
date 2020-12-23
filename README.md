@@ -1,11 +1,11 @@
 # Anime-Stadia
 
 <div style="display:flex">
-    <img src="./docs/screenshots/home.png">
-    <img src="./docs/screenshots/emision.png">
-    <img src="./docs/screenshots/anime.png">
-    <img src="./docs/screenshots/episode.png">
-    <img src="./docs/screenshots/search.png">
+    <img src="./docs/screenshots/home.png" width="19.5%">
+    <img src="./docs/screenshots/emision.png" width="19.5%">
+    <img src="./docs/screenshots/anime.png" width="19.5%">
+    <img src="./docs/screenshots/episode.png" width="19.5%">
+    <img src="./docs/screenshots/search.png" width="19.5%">
 </div>
 
 

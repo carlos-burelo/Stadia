@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class SearchComponent implements OnInit {
   title = 'Search';
   gender_container = true
+  searchByGender_container = false
 
   genders_response : any;
   searchName_response:any;
@@ -36,6 +37,7 @@ export class SearchComponent implements OnInit {
   }
   searchbyGender($event:any ,gender:any ){
       this.gender_container = false
+      this.searchByGender_container = true
       this.gender = gender.id
       this.gender_page = this.gender_page +1
       this.apiSvc.searchByGender(this.gender, this.gender_page).subscribe((res: any) => {
