@@ -6,11 +6,46 @@
                 <h5 class="title_section">Directory</h5>
             </div>
             <div class="search_bar_container">
-                <input class="search_bar" type="text">
+                <form [formGroup]="searchForm" (ngSubmit)="searchAnime(searchForm.value)">
+                    <input class="search_bar" type="search" autocomplete="off" formControlName="name"  spellcheck="false" placeholder="Name">
+                </form>
             </div>
 
-            <div class="genders_container">
-                <button *ngFor="let anime of genders?.genders">{{anime.title}}</button>
+            <div *ngIf="gender_container == true" class="genders_container">
+                <button *ngFor="let gender of genders_response?.genders" (click)="searchbyGender($event, gender)">{{gender.title}}</button>
+            </div>
+
+            <div class="search_container">
+                <div class="anime_card" *ngFor="let anime of searchName_response?.animes" [routerLink]="['/anime',anime.id]">
+                    <div class="anime_card_img">
+                        <img [src]="anime.img" [alt]="anime.title">
+                    </div>
+                    <div class="anime_card_info">
+                        <li><h1 class="anime_card_year">Año {{anime.year}}</h1></li>
+                        <li><h1 class="anime_card_title">{{anime.title}}</h1></li>
+                        <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime.category}}</h1></li>
+                        <li><h1 class="anime_card_favorite"><i class="far fa-star"></i></h1></li>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search_gender_container">
+                <div class="control_page">
+                    <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
+                    <button class="back_page push" (click)="nextPage()">NEXT<i class="fas fa-chevron-right"></i></button>
+                    <div class="page_indicator" *ngIf="searchGender_response | keyvalue" >Pagina {{gender_page}} de {{searchGender_response?.pages}}</div>
+                </div>
+                <div class="anime_card" *ngFor="let anime of searchGender_response?.animes" [routerLink]="['/anime',anime.id]">
+                    <div class="anime_card_img">
+                        <img [src]="anime.img" [alt]="anime.title">
+                    </div>
+                    <div class="anime_card_info">
+                        <li><h1 class="anime_card_year">Año {{anime.year}}</h1></li>
+                        <li><h1 class="anime_card_title">{{anime.title}}</h1></li>
+                        <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime.category}}</h1></li>
+                        <li><h1 class="anime_card_favorite"><i class="far fa-star"></i></h1></li>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

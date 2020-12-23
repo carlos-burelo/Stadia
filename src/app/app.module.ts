@@ -13,6 +13,8 @@ import { EmisionComponent } from './pages/emision/emision.component';
 import { EpisodeComponent } from './views/episode/episode.component';
 import { AnimeComponent } from './views/anime/anime.component';
 import { DirectoryComponent } from './pages/directory/directory.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { DirectoryComponent } from './pages/directory/directory.component';
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

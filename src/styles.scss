@@ -272,16 +272,19 @@ app-toolbar{
     align-items: center;
     justify-content: center;
     display: flex;
-    .search_bar {
+    form{
         width: 100%;
-        height: 60px;
-        padding: 8px;
-        font-size: 20px;
-        color: $text;
-        border-radius: $mid-raduis;
-        border: none;
-        outline: none;
-        background-color: #212121;
+        .search_bar {
+            width: 100%;
+            height: 60px;
+            padding: 8px;
+            font-size: 20px;
+            color: $text;
+            border-radius: $mid-raduis;
+            border: none;
+            outline: none;
+            background-color: #212121;
+        }
     }
 }
 .genders_container{
@@ -494,4 +497,7 @@ h1.suggestion_title_card{
         font-size: 15px;
         color: $text;
     }
+}
+.search_container{
+    margin-top: 20px;
 }
