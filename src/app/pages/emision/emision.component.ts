@@ -7,6 +7,7 @@ import { ApiService } from '@services/api.service';
   styleUrls: ['./emision.component.scss']
 })
 export class EmisionComponent implements OnInit {
+  title = 'Emision';
   public emision : any;
   constructor(public apiSvc: ApiService) { }
 

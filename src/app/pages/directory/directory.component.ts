@@ -7,6 +7,7 @@ import { ApiService } from '@services/api.service';
   styleUrls: ['./directory.component.scss']
 })
 export class DirectoryComponent implements OnInit {
+  title = 'Directory';
   public animes : any;
   constructor(public apiSvc: ApiService) { }
 

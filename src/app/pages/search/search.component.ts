@@ -7,7 +7,7 @@ import { ApiService } from '@services/api.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
+  title = 'Search';
   public genders : any;
   constructor(public apiSvc: ApiService) { }
 

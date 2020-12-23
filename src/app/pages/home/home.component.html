@@ -1,8 +1,8 @@
+<title>{{title}}</title>
 <app-toolbar></app-toolbar>
-<div class="main_container">
-    <div class="container">
-        <div class="section_title"><i class="far fa-clock"></i>  CAPITULOS RECIENTES</div>
-        <!-- <div ngIf="lastest?.animes > 0"> -->
+    <div class="main_container">
+        <div class="container">
+            <div class="section_title"><i class="far fa-clock"></i>  CAPITULOS RECIENTES</div>
             <div class="cap_card" *ngFor="let anime of lastest?.animes" [routerLink]="['/ver',anime.id]">
                 <div class="cap_card_img">
                     <img [src]="anime.img" [alt]="anime.title">
@@ -13,8 +13,6 @@
                     <li><h1 class="cap_card_tipo"><i class="fas fa-play"></i>{{anime.type}}</h1></li>
                 </div>
             </div>
-        <!-- </div> -->
-
+        </div>
     </div>
-</div>
 <app-navbar></app-navbar>
