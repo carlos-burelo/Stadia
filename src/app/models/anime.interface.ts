@@ -1,0 +1,17 @@
+export interface animeInterface {
+    title?: string,
+    img?: string,
+    id?: string,
+    nEpisode?: string,
+    type?: string,
+    description?: string,
+    status?: string,
+    date?: string,
+    animeId?: string,
+    epNumber?: Number,
+    genders?: object,
+    sugestions?: object,
+    episodes?: object,
+    downloads?: object,
+    videos?: object,
+}

@@ -1,0 +1,17 @@
+<app-toolbar></app-toolbar>
+    <div class="main_container">
+        <div class="container">
+            <div class="section_title"><i class="far fa-clock"></i>  ULTIMOS ANIMES</div>
+            <div class="anime_card" *ngFor="let anime of emision?.animes" [routerLink]="['/anime',anime.id]">
+                <div class="anime_card_img">
+                    <img [src]="anime.img" [alt]="anime.title">
+                </div>
+                <div class="anime_card_info">
+                    <li><h1 class="anime_card_year">Año {{anime.year}}</h1></li>
+                    <li><h1 class="anime_card_title">{{anime.title}}</h1></li>
+                    <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime.category}}</h1></li>
+                </div>
+            </div>
+        </div>
+    </div>
+<app-navbar></app-navbar>

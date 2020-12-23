@@ -1,0 +1,27 @@
+<app-toolbar></app-toolbar>
+
+<div class="main_container">
+    <div class="container">
+        <div *ngIf="episode | keyvalue">
+            <div class="episode_nav"> <div>ver/{{episode?.animeId}}</div></div>
+                <div class="episode_card">
+                    <h5 class="episode_name">{{episode?.title}}</h5>
+                    <ul>
+                        <li *ngFor="let video of episode?.videos" (click)="getVideo($event, video)" >Server</li>
+                    </ul>
+                    <iframe [src]="videourlSafe" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen frameborder="0" class="video_container" width="100%" height="100%"></iframe>
+                    <ul class="download_zone">
+                        <a class="download_link" *ngFor="let link of episode?.downloads" [href]="link" target="_blank">
+                            <i class="fas fa-cloud-download-alt"></i>
+                        </a>
+                        
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<app-navbar></app-navbar>
+
+
+<!-- <h6>{{episode?.title}}</h6>
+<img [src]="episode?.img" [alt]="episode?.title"> -->

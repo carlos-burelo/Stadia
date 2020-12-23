@@ -1,0 +1,16 @@
+<app-toolbar></app-toolbar>
+    <div class="main_container">
+        <div class="container">
+            <div class="title_search">
+                <h5 class="title_section">Directory</h5>
+            </div>
+            <div class="search_bar_container">
+                <input class="search_bar" type="text">
+            </div>
+
+            <div class="genders_container">
+                <button *ngFor="let anime of genders?.genders">{{anime.title}}</button>
+            </div>
+        </div>
+    </div>
+<app-navbar></app-navbar>
