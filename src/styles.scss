@@ -5,15 +5,18 @@
     font-family: 'Rubik';
     scroll-behavior: smooth;
 }
-// Variables
-    $main:#d50303;
-    $text: #ffffff;
-    $primary: #000000;
-    $secondary: #0e0e0e;
-    $subtitle: #747474;
-    $min-radius: 5px;
-    $mid-raduis: 10px;
-    $max-radius: 20px;
+
+
+$main:#ee1717;
+$tool: #ff9900;
+$text: #ffffff;
+$primary: #000000;
+$secondary: #0e0e0e;
+$subtitle: #747474;
+$subtext: #aaaaaa;
+$min-radius: 5px;
+$mid-raduis: 10px;
+$max-radius: 20px;
 
 // Efectos
 @-webkit-keyframes push {
@@ -202,6 +205,10 @@ app-toolbar{
     border-radius: $min-radius;
     margin-bottom: 13px;
     height: 160px;
+    &:focus{
+        outline: none;
+        border: none;
+    }
     .anime_card_img{
         width: 30%;
         height: 100%;
@@ -232,6 +239,19 @@ app-toolbar{
             }
             h1.anime_card_title{
                 font-weight: 500;
+            }
+            h1.anime_card_favorite{
+                border-radius: $min-radius;
+                background-color: $tool;
+                color: $primary;
+                width: fit-content;
+                i{
+                    font-size: 15px;
+                    padding: 4px;
+                    color: $primary;
+                    margin: 0;
+                    
+                }
             }
         }
     }
@@ -375,7 +395,7 @@ app-toolbar{
     button{
         border: none;
         outline: none;
-        padding: 8px 16px;
+        padding: 4px 16px;
         margin: 0px 10px 10px 0px;
         color: $text;
         background-color: $main;
@@ -388,7 +408,7 @@ app-toolbar{
 }
 .sinopsis_container{
     .sinopsis{
-        color: $text;
+        color: $subtext;
     }
 }
 .suggestions_container{
@@ -415,7 +435,7 @@ app-toolbar{
 
         }
         .anime_card_info{
-            width: 100%;
+            width: 200px;
             padding: 0px 15px 0px 0px;
             li{
                 list-style: none;
@@ -454,8 +474,10 @@ h1.suggestion_title_card{
 
 .control_page{
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
+    align-items: center;
+    margin-bottom: 20px;
     .back_page,.next_page{
         background: $main;
         border: none;
@@ -467,5 +489,9 @@ h1.suggestion_title_card{
             color: $text;
             margin: 0px 10px;
         }
+    }
+    .page_indicator{
+        font-size: 15px;
+        color: $text;
     }
 }

@@ -6,8 +6,9 @@
                 <div class="control_page">
                     <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
                     <button class="back_page push" (click)="getAnimesPerPage()">NEXT<i class="fas fa-chevron-right"></i></button>
+                    <div class="page_indicator" *ngIf="animes | keyvalue" >Pagina {{npage}} de {{animes?.pages}}</div>
                 </div>
-                <div class="page_indicator" *ngIf="animes | keyvalue" class="text">Pagina {{npage}} de {{animes?.pages}}</div>
+                
                 <div class="anime_card" *ngFor="let anime of animes?.animes" [routerLink]="['/anime',anime.id]">
                     <div class="anime_card_img">
                         <img [src]="anime.img" [alt]="anime.title">
@@ -16,6 +17,7 @@
                         <li><h1 class="anime_card_year">Año {{anime.year}}</h1></li>
                         <li><h1 class="anime_card_title">{{anime.title}}</h1></li>
                         <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime.category}}</h1></li>
+                        <li><h1 class="anime_card_favorite"><i class="far fa-star"></i></h1></li>
                     </div>
                 </div>
         </div>
