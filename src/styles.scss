@@ -14,6 +14,39 @@
     $min-radius: 5px;
     $mid-raduis: 10px;
     $max-radius: 20px;
+
+// Efectos
+@-webkit-keyframes push {
+	50% {
+		/* -webkit-transform: scale(0.8); */
+		transform: scale(0.7)
+	}
+	100% {
+		/* -webkit-transform: scale(1); */
+		transform: scale(1)
+	}
+}
+@keyframes push {
+	50% {
+		/* -webkit-transform: scale(0.8); */
+		transform: scale(0.8)
+	}
+	100% {
+		/* -webkit-transform: scale(1); */
+		transform: scale(1)
+	}
+}
+.push {
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+}
+.push:active, .push:focus, .push:hover {
+	animation-name: push;
+	animation-duration: .2s;
+	animation-timing-function: linear;
+	animation-iteration-count: 1
+}
+
 // General
 body{
     background-color: $primary;
@@ -59,6 +92,11 @@ app-navbar{
         .menu_active{
             background: $secondary;
             color: $main;
+        }
+        .menu_item{
+            &:focus{
+                color: $main;
+            }
         }
     }
 }
@@ -405,4 +443,29 @@ app-toolbar{
 h1.suggestion_title_card{
     font-size: 15px;
     font-weight: 500;
+}
+
+
+.text{
+    color: #ffffff;
+    font-size: 30px;
+}
+// ==== ==== Directory ==== ==== //
+
+.control_page{
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    .back_page,.next_page{
+        background: $main;
+        border: none;
+        outline: none;
+        color: $text;
+        padding: 10px 20px;
+        border-radius: $min-radius;
+        i{
+            color: $text;
+            margin: 0px 10px;
+        }
+    }
 }

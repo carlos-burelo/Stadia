@@ -3,24 +3,21 @@
     <div class="main_container">
         <div class="container">
             <div class="recents_title"><i class="far fa-clock"></i>  CAPITULOS RECIENTES</div>
-            <div class="anime_container">
-                <div class="anime_target">
-                    <div class="target_img">
-                        <img src="https://monoschinos2.com/image/imagen/160/224/byousoku-5-centimeter.jpg" alt="">
+                <div class="control_page">
+                    <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
+                    <button class="back_page push" (click)="getAnimesPerPage()">NEXT<i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="page_indicator" *ngIf="animes | keyvalue" class="text">Pagina {{npage}} de {{animes?.pages}}</div>
+                <div class="anime_card" *ngFor="let anime of animes?.animes" [routerLink]="['/anime',anime.id]">
+                    <div class="anime_card_img">
+                        <img [src]="anime.img" [alt]="anime.title">
                     </div>
-                    <div class="target_info">
-                        <div class="target_name">Anime 1</div>
+                    <div class="anime_card_info">
+                        <li><h1 class="anime_card_year">Año {{anime.year}}</h1></li>
+                        <li><h1 class="anime_card_title">{{anime.title}}</h1></li>
+                        <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime.category}}</h1></li>
                     </div>
                 </div>
-                <div class="anime_target">
-                    <div class="target_img">
-                        <img src="https://monoschinos2.com/image/imagen/160/224/byousoku-5-centimeter.jpg" alt="">
-                    </div>
-                    <div class="target_info">
-                        <div class="target_name">Anime 2</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 <app-navbar></app-navbar>
