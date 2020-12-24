@@ -9,7 +9,7 @@
 /bazel-out
 
 #original api
-/src/app/services/api.service.ts
+#/src/app/services/api.service.ts
 
 # dependencies
 /node_modules
