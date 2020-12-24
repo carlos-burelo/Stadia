@@ -3,6 +3,11 @@
     <div class="main_container">
         <div class="container">
             <div class="section_title"><i class="far fa-clock"></i>  ULTIMOS ANIMES</div>
+            <div class="control_page">
+                <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
+                <button class="back_page push" (click)="getEmision()">NEXT<i class="fas fa-chevron-right"></i></button>
+                <div class="page_indicator" *ngIf="emision | keyvalue" >Pagina {{page}} de {{emision?.pages}}</div>
+            </div>
             <div class="anime_card" *ngFor="let anime of emision?.animes" [routerLink]="['/anime',anime.id]">
                 <div class="anime_card_img">
                     <img [src]="anime.img" [alt]="anime.title">

@@ -8,7 +8,8 @@ import { ApiService } from '@services/api.service';
 })
 export class EmisionComponent implements OnInit {
   title = 'Emision';
-  public emision : any;
+  emision : any;
+  page = 0;
   constructor(public apiSvc: ApiService) { }
 
   ngOnInit(): void {
@@ -16,8 +17,16 @@ export class EmisionComponent implements OnInit {
   }
 
   getEmision(){
-    this.apiSvc.getEmision().subscribe(emision => {
+    this.page = this.page + 1
+    this.apiSvc.getEmision(this.page).subscribe(emision => {
       this.emision = emision;
     });
   }
+  backPage(){
+    this.page = this.page - 1
+    this.apiSvc.getEmision(this.page).subscribe(emision => {
+      this.emision = emision;
+    });
+  }
+  
 }
