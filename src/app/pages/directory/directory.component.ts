@@ -26,14 +26,7 @@ export class DirectoryComponent implements OnInit {
     this.npage = this.npage-1;
     this.apiSvc.getAnimes(this.npage).subscribe((res: any) => {
       this.animes = res;
-      console.log('resultados de la pagina' + this.npage + this.animes)
     });
   } 
-  // getAnimesPerPages(page?:number){
 
-  //   this.apiSvc.getAnimes().subscribe(animes => {
-  //     this.animes = animes;
-  //     console.log(animes)
-  //   });
-  // }
 }

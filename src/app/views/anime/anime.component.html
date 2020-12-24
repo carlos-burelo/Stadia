@@ -1,4 +1,9 @@
+<title>{{anime?.anime.title}}</title>
 <app-toolbar></app-toolbar>
+<div class="loading_container" *ngIf="!anime">
+    <img src="https://2.bp.blogspot.com/-efY5-4XTVMU/WVpPJeyuTxI/AAAAAAAQEU0/mD5MWKb_avEocSus7vtLfOe0jTnVDi_IgCLcBGAs/s1600/AW465513_16.gif">
+    <h1 class="loading">Loading episode...</h1>
+</div>
 <div class="main_container">
     <div class="container">
         
@@ -7,36 +12,45 @@
                 <img [src]="anime?.anime.img" [alt]="anime?.anime.title">
             </div>
             <div class="anime_card_info">
-                <li><h1 class="anime_card_year">Status: {{anime?.anime.status}}</h1></li>
-                <!-- <br> -->
                 <li><h1 class="anime_card_title">{{anime?.anime.title}}</h1></li>
-                <!-- <br> -->
+                <li><h1 class="anime_card_year">{{anime?.anime.status}}</h1></li>
                 <li><h1 class="anime_card_type"><i class="fas fa-play"></i>{{anime?.anime.date}}</h1></li>
-            </div>
-        </div>
-        <div class="anime_card_genders">
-            <button *ngFor="let g of anime?.anime.genders">{{g.title}}</button>
-        </div>
-
-        <div class="subtitle_text">Sinopsis</div>
-        <div class="sinopsis_container">
-            <p class="sinopsis">
-                {{anime?.anime.description}}
-            </p>
-        </div>
-        <div class="subtitle_text">Suggestions</div>
-        <div class="suggestions_container">
-            <div class="anime_card" *ngFor="let sug of anime?.anime.sugestions"  [routerLink]="['/anime',sug.id]">
-                <div class="anime_card_img">
-                    <img [src]="sug.img" [alt]="sug.title">
-                    <h2 class="suggestion_title">{{sug.title}}</h2>
-                </div>
-                <div class="anime_card_info">
-                    <li><h1 class="anime_card_year"><i class="fas fa-play"></i>{{sug.year}}</h1></li>
-                    <li><h1 class="anime_card_title">{{sug.title}}</h1></li>
+                <div class="anime_card_genders">
+                    <button *ngFor="let g of anime?.anime.genders">{{g.title}}</button>
                 </div>
             </div>
+        </div>
+        
+        <div class="nav_anime_card" id="sections">
+            <div class="anime_card_section" [ngClass]="Info ? 'section_active' : 'none' " (click)="showInfo()" >Information</div>
+            <div class="anime_card_section" [ngClass]="Episode ? 'section_active' : 'none' " (click)="showEp()">Episodes</div>
+        </div>
+        <div *ngIf="info_container == true">
+            <div class="subtitle_text">Sinopsis</div>
+            <div class="sinopsis_container">
+                <p class="sinopsis">
+                    {{anime?.anime.description}}
+                </p>
+            </div>
+            <div class="subtitle_text">Suggestions</div>
+            <div class="suggestions_container">
+                <a class="anime_card" *ngFor="let sug of anime?.anime.sugestions"  attr.href="/anime/{{sug.id}}">
+                    <div class="anime_card_img">
+                        <img [src]="sug.img" [alt]="sug.title">
+                    </div>
+                    <div class="anime_card_info">
+                        <li><h1 class="anime_card_year"><i class="fas fa-play"></i>{{sug.year}}</h1></li>
+                        <li><h1 class="anime_card_title">{{sug.title}}</h1></li>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div *ngIf="episode_container == true">
+            <ul>
+                <li *ngFor="let c of anime?.anime.episodes" class="episode_item" [routerLink]="['/ver',c.id]">Episode {{c.episode}}</li>
+            </ul>
         </div>
     </div>
 </div>
+
 <app-navbar></app-navbar>

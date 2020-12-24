@@ -1,5 +1,9 @@
 <title>{{title}}</title>
 <app-toolbar></app-toolbar>
+    <div class="loading_container" *ngIf="!lastest">
+        <img src="https://2.bp.blogspot.com/-efY5-4XTVMU/WVpPJeyuTxI/AAAAAAAQEU0/mD5MWKb_avEocSus7vtLfOe0jTnVDi_IgCLcBGAs/s1600/AW465513_16.gif">
+        <h1 class="loading">Loading episodes...</h1>
+    </div>
     <div class="main_container">
         <div class="container">
             <div class="section_title"><i class="far fa-clock"></i>  CAPITULOS RECIENTES</div>

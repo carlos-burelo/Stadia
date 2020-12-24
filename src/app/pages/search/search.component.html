@@ -16,7 +16,7 @@
             </div>
 
             <div class="search_container">
-                <div class="anime_card" *ngFor="let anime of searchName_response?.animes" [routerLink]="['/anime',anime.id]">
+                <div class="anime_card" *ngFor="let anime of searchName_response?.animes" [routerLink]="['/anime', anime.id]">
                     <div class="anime_card_img">
                         <img [src]="anime.img" [alt]="anime.title">
                     </div>
@@ -33,9 +33,9 @@
                 <div class="control_page">
                     <button class="next_page push" (click)="backPage()"><i class="fas fa-chevron-left"></i>BACK</button>
                     <button class="back_page push" (click)="nextPage()">NEXT<i class="fas fa-chevron-right"></i></button>
-                    <div class="page_indicator" *ngIf="searchGender_response | keyvalue" >Pagina {{gender_page}} de {{searchGender_response?.pages}}</div>
+                    <div class="page_indicator" *ngIf="searchGender_response | keyvalue" >Page {{gender_page}} of {{searchGender_response?.pages}}</div>
                 </div>
-                <div class="anime_card" *ngFor="let anime of searchGender_response?.animes" [routerLink]="['/anime',anime.id]">
+                <div class="anime_card" *ngFor="let anime of searchGender_response?.animes" [routerLink]="['/anime', anime.id]">
                     <div class="anime_card_img">
                         <img [src]="anime.img" [alt]="anime.title">
                     </div>

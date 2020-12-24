@@ -7,7 +7,7 @@
 }
 
 
-$main:#ee1717;
+$main:#163890;
 $tool: #ff9900;
 $text: #ffffff;
 $primary: #000000;
@@ -85,6 +85,10 @@ app-navbar{
                 display: flex;
                 justify-content: center;
             }
+            img{
+                width: 30px;
+                height: 30px;
+            }
             &:focus,:hover,:active{
                 outline: none;
             }
@@ -94,11 +98,11 @@ app-navbar{
         }
         .menu_active{
             background: $secondary;
-            color: $main;
+            color: $tool;
         }
         .menu_item{
             &:focus{
-                color: $main;
+                color: $tool;
             }
         }
     }
@@ -122,6 +126,10 @@ app-toolbar{
             color: $text;
             i{
                 font-size: 30px;
+            }
+            img{
+                width: 40px;
+                height: 40px;
             }
         }
         .app_logo{
@@ -205,6 +213,7 @@ app-toolbar{
     border-radius: $min-radius;
     margin-bottom: 13px;
     height: 160px;
+    text-decoration: none;
     &:focus{
         outline: none;
         border: none;
@@ -229,7 +238,7 @@ app-toolbar{
                 color: $main;
             }
             h1{
-                font-size: 18px;
+                font-size: 16.5px;
                 color: $text;
                 margin: 5px 0; 
             }
@@ -351,7 +360,6 @@ app-toolbar{
         font-size: 18px;
     }
     ul{
-        margin-top: 30px;
         display: flex;
         overflow: scroll;
         li{
@@ -398,7 +406,7 @@ app-toolbar{
     button{
         border: none;
         outline: none;
-        padding: 4px 16px;
+        padding: 2px 16px;
         margin: 0px 10px 10px 0px;
         color: $text;
         background-color: $main;
@@ -407,9 +415,13 @@ app-toolbar{
 }
 .subtitle_text{
     color: $text;
+    font-size: 20px;
     margin: 20px 0;
 }
 .sinopsis_container{
+    background-color: $secondary;
+    padding: 10px;
+    border-radius: 5px;
     .sinopsis{
         color: $subtext;
     }
@@ -500,4 +512,47 @@ h1.suggestion_title_card{
 }
 .search_container{
     margin-top: 20px;
+}
+
+.nav_anime_card{
+    display: flex;
+    .anime_card_section{
+        text-decoration: none;
+        color: $text;
+        font-size: 16px;
+        padding-bottom: 8px;
+        margin: 10px;
+        &:focus,:active{
+            border-bottom: solid 2px $text;
+        }
+    }
+}
+.section_active{
+    border-bottom: solid 2px $text;
+}
+
+.episode_item{
+    background: $secondary;
+    border-radius: $min-radius;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    color: $text;
+    list-style: none;
+}
+
+.loading_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 200px;
+    }
+    h1{
+        color: $text;
+    }
+
 }

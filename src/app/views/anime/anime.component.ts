@@ -10,6 +10,11 @@ import { ApiService } from '@services/api.service';
 export class AnimeComponent implements OnInit {
 
   public anime:any;
+  Episode: boolean = false;
+  Info: boolean = true;
+  info_container = true;
+  episode_container = false;
+
   constructor(private route: ActivatedRoute, public apiSvc: ApiService, router: Router) { }
 
   ngOnInit(): void {
@@ -21,7 +26,20 @@ export class AnimeComponent implements OnInit {
       this.anime = res;
     });
   }
-  navigate($event:any, id:string){
+
+  showInfo(){
+    this.Info = true;
+    this.Episode = false;
+    this.info_container = true;
+    this.episode_container = false;
+  }
+  showEp(){
+    this.Info = false;
+    this.Episode = true;
+    this.info_container = false;
+    this.episode_container = true;
+  }
+  getEpisodeById(id:any){
     console.log(id)
   }
 }
