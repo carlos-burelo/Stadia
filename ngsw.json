@@ -1,0 +1,85 @@
+{
+  "configVersion": 1,
+  "timestamp": 1609390949352,
+  "index": "https://carlos-burelo.github.io/Stadia/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://carlos-burelo.github.io/Stadia/favicon.ico",
+        "https://carlos-burelo.github.io/Stadia/index.html",
+        "https://carlos-burelo.github.io/Stadia/main.366f090f9f84dd011b41.js",
+        "https://carlos-burelo.github.io/Stadia/manifest.webmanifest",
+        "https://carlos-burelo.github.io/Stadia/polyfills.8c151b8375e767ff858f.js",
+        "https://carlos-burelo.github.io/Stadia/runtime.0e49e2b53282f40c8925.js",
+        "https://carlos-burelo.github.io/Stadia/styles.38eebba8ba5e45735dff.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-128x128.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-144x144.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-152x152.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-192x192.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-384x384.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-512x512.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-72x72.png",
+        "https://carlos-burelo.github.io/Stadia/assets/icons/icon-96x96.png",
+        "https://carlos-burelo.github.io/Stadia/assets/load.gif",
+        "https://carlos-burelo.github.io/Stadia/assets/logo.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-128x128.png": "bf2a3911b369ee24912dfaf6618de6f139b4add5",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-144x144.png": "9f54f4b3f8e25e01e45203770ddf55d6277bd163",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-152x152.png": "fb1159c361ece2c226cc7097e358d343dc45c715",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-192x192.png": "cd64aa6307f8e843d8865d180693bd1482079c75",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-384x384.png": "a33c689d48791b3489db995cfc1d4c4bb2b1da24",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-512x512.png": "988ab70fd0d9cc265da47efaeb25f49afa202719",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-72x72.png": "9f3b0cb0a51918306456f21eea5744b024109a78",
+    "https://carlos-burelo.github.io/Stadia/assets/icons/icon-96x96.png": "beaf1ebf03edb48fe16b4f54a41c9f37e8b7da25",
+    "https://carlos-burelo.github.io/Stadia/assets/load.gif": "0ca8900626acc56079409aabe942a46e4ebcc543",
+    "https://carlos-burelo.github.io/Stadia/assets/logo.png": "579115e2522bb394dd4cacae178b83197cba6988",
+    "https://carlos-burelo.github.io/Stadia/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://carlos-burelo.github.io/Stadia/index.html": "670e539bbf743bfeb39252f1d7ffd1f08e78603b",
+    "https://carlos-burelo.github.io/Stadia/main.366f090f9f84dd011b41.js": "fe7e586b985fce74afe04cb94722288af7fad4ac",
+    "https://carlos-burelo.github.io/Stadia/manifest.webmanifest": "44aa7f3a1ae729ae7f229a4fbad29dce81c37ff0",
+    "https://carlos-burelo.github.io/Stadia/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
+    "https://carlos-burelo.github.io/Stadia/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://carlos-burelo.github.io/Stadia/styles.38eebba8ba5e45735dff.css": "f635a9d77492fc09b0e869d6c4c84f269ba71071"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
