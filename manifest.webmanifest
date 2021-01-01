@@ -1,8 +1,8 @@
 {
-  "name": "monoschinos",
-  "short_name": "monoschinos",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Stadia",
+  "short_name": "Stadia",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
