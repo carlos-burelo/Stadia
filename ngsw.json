@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1609541601832,
+  "timestamp": 1609542452071,
   "index": "https://carlos-burelo.github.io/Stadia/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://carlos-burelo.github.io/Stadia/favicon.ico",
         "https://carlos-burelo.github.io/Stadia/index.html",
-        "https://carlos-burelo.github.io/Stadia/main.5cda2b1d2ac4266503a6.js",
+        "https://carlos-burelo.github.io/Stadia/main.b1b5178159cf75abdc9e.js",
         "https://carlos-burelo.github.io/Stadia/manifest.webmanifest",
         "https://carlos-burelo.github.io/Stadia/polyfills.8c151b8375e767ff858f.js",
         "https://carlos-burelo.github.io/Stadia/runtime.0e49e2b53282f40c8925.js",
@@ -54,8 +54,8 @@
     "https://carlos-burelo.github.io/Stadia/assets/icons/icon-96x96.png": "beaf1ebf03edb48fe16b4f54a41c9f37e8b7da25",
     "https://carlos-burelo.github.io/Stadia/assets/logo.png": "579115e2522bb394dd4cacae178b83197cba6988",
     "https://carlos-burelo.github.io/Stadia/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://carlos-burelo.github.io/Stadia/index.html": "aaa9d0ca11f53a3d32b5311e9a4947842fc5b5c7",
-    "https://carlos-burelo.github.io/Stadia/main.5cda2b1d2ac4266503a6.js": "d7cb8682867b15cef73890106dbcd964da82c565",
+    "https://carlos-burelo.github.io/Stadia/index.html": "82a94d1a4918ee41ffd6467ed5d975360ed7da5a",
+    "https://carlos-burelo.github.io/Stadia/main.b1b5178159cf75abdc9e.js": "64764252b9d91fcce8264ac6847530ba6d247a12",
     "https://carlos-burelo.github.io/Stadia/manifest.webmanifest": "39ae97c656a3cf8d1020fecfc22d5e9265c64a29",
     "https://carlos-burelo.github.io/Stadia/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
     "https://carlos-burelo.github.io/Stadia/runtime.0e49e2b53282f40c8925.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
