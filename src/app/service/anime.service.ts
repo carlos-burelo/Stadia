@@ -5,6 +5,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AnimeService {
+  // developer environment, to build the API follow this repository:
+  // https://github.com/atleugim/monoschinos-api
+  // Original api credits to atleugim
   URL_API = 'http://localhost:3000/api/v1';
 
   constructor(public http: HttpClient) { }
