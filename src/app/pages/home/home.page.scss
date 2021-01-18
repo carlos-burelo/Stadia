@@ -1,0 +1,57 @@
+
+@import '../../../theme/variables.scss';
+.episode_card{
+    width: 100%;
+    display: flex;
+    border-radius: $min-radius;
+    margin-bottom: 13px;
+    height: 80px;
+    &:focus{
+        outline: none;
+    }
+    .episode_card_img{
+        width: 45%;
+        height: 100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: $min-radius;
+            height: 100%;
+        }
+    }
+    .episode_card_info{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 10px;
+        // background: $card;
+        border-radius: 0 $min-radius $min-radius 0;
+        li{
+            list-style: none;
+            .episode_card_numero,
+            .episode_card_tipo {
+                font-weight: 400;
+                color: $subtitle;
+            }
+            .episode_card_title{
+                font-weight: 500;
+                color: $text;
+            }
+            div{
+                font-size: 13.5px;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                mark{
+                    color: $tool;
+                    background-color: transparent;
+                    font-weight: 500;
+                    border-radius: 2px;
+                    margin-left: 10px;
+                }
+            }
+
+        }
+    }
+}

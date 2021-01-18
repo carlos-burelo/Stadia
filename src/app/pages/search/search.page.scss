@@ -1,0 +1,53 @@
+.anime_container{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
+}
+.anime_card{
+    width: calc(33.333333% - 20px);
+    margin: 10px;
+	display: block;
+    .portada{
+        img{
+            border-radius: 5px;
+            object-fit: cover;
+            width: 100%;
+            cursor: pointer;
+        }
+    }   
+    .anime_name {
+        position: relative;
+        bottom: 0;
+        font-size: 12px;
+        height: 20px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.not_results{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p{
+        text-align: center;
+        font-size: 24px;
+    }
+    img{
+        border-radius: 200px;
+    }
+}
+.search_off{
+    padding-top: 15px;
+    width: 92%;
+    margin: auto;
+}

@@ -1,0 +1,39 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+      <ion-icon class="menu" name="menu-outline"></ion-icon>
+    </ion-title>
+    
+  </ion-toolbar>
+
+    
+
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <div class="container">
+    <div class="episode_card" *ngFor="let a of lastest?.animes" [routerLink]="['/ver',a.id]">
+        <div class="episode_card_info">
+            <li><div class="episode_card_numero">Capitulo <mark>{{a.nEpisode}}</mark></div></li>
+            <li><div class="episode_card_title">{{a.title}}</div></li>
+        </div>
+        <div class="episode_card_img">
+            <img [src]="a.img" [alt]="a.title">
+        </div>
+    </div>
+    
+</div>
+
+</ion-content>

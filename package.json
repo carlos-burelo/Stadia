@@ -1,5 +1,5 @@
 {
-  "name": "Stadia",
+  "name": "stadia",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -9,6 +9,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "dev": "ng run app:serve --host=0.0.0.0 --port=8100",
     "e2e": "ng e2e"
   },
   "private": true,

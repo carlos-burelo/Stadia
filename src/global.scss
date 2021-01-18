@@ -24,3 +24,20 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+// Efectos
+*{
+    font-family: 'Rubik';
+}
+.container{
+    width: 95%;
+    margin: 20px auto;
+}
+
+ion-searchbar{
+    background: #151515;
+    border-radius: 5px;
+}
