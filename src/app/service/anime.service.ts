@@ -8,7 +8,7 @@ export class AnimeService {
   // developer environment, to build the API follow this repository:
   // https://github.com/atleugim/monoschinos-api
   // Original api credits to atleugim
-  URL_API = 'http://localhost:3000/api/v1';
+  URL_API = 'https://api-monoschinos.herokuapp.com/api/v1';
 
   constructor(public http: HttpClient) { }
   getLastest(){
