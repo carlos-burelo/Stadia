@@ -13,13 +13,20 @@ export class AnimePage implements OnInit {
   constructor( public apiSvc: AnimeService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getCapitulo();
+    this.getAnime();
   }
-  getCapitulo(){
+  getAnime(){
     const id = this.route.snapshot.params.id;
     this.apiSvc.getAnime(id).subscribe((res: any) => {
       this.anime = res;
     });
+  }
+  doRefresh(event){
+    setTimeout(() => {
+      this.getAnime();
+      event.target.complete();
+    }, 1000);
+    
   }
 
 }

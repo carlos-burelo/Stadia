@@ -32,7 +32,7 @@ export class EpisodePage implements OnInit {
 
   ngOnInit() {
     this.getEpisode();
-    this.getVideo('https://www.dlf.pt/png/big/12/126718_please-wait-png.png');
+    this.getVideo('https://media.discordapp.net/attachments/536165526011904010/538450208376356875/Portada_2.jpg');
   }
   getEpisode(){
     const id = this.route.snapshot.params.id;

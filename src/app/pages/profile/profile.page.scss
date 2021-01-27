@@ -1,17 +1,16 @@
 $background: #000000;
-
-.user_card_container{
+.user_card_container {
     display: flex;
     align-items: center;
     width: 92%;
     margin: auto;
-    img{
+    img {
         width: 100px;
         height: 100px;
         object-fit: cover;
         border-radius: 50%;
     }
-    .user_info{
+    .user_info {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -20,22 +19,26 @@ $background: #000000;
     }
 }
 
-
-ion-list-header, ion-list, ion-item, .item-native, ion-label{
+ion-list-header,
+ion-list,
+ion-item,
+.item-native,
+ion-label {
     background-color: #000000!important;
 }
-ion-avatar{
+
+ion-avatar {
     display: flex;
     justify-content: center;
     align-items: center;
-    vertical-align: middle;   
-    ion-icon{
+    vertical-align: middle;
+    ion-icon {
         font-size: 20px;
-        height: 90%;
-        width: 90%;
+        height: 70%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        vertical-align: middle;   
+        vertical-align: middle;
     }
 }

@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'category/:id',
     loadChildren: () => import('./views/category/category.module').then( m => m.CategoryPageModule)
+  },
+  {
+    path: 'gender/:id',
+    loadChildren: () => import('./views/gender/gender.module').then( m => m.GenderPageModule)
   }
 ];
 @NgModule({

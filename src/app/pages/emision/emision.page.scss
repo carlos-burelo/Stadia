@@ -1,23 +1,44 @@
-.anime_container{
+.anime_container {
     display: flex;
     position: relative;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.anime_card{
+
+.anime_info {
+    position: relative;
+    bottom: 0px;
+    font-size: 12px;
+    height: 20px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    mark {
+        background-color: #ffffffc4;
+        color: #000;
+        padding: 1px 6px;
+        border-radius: 10px;
+    }
+}
+
+.anime_card {
     width: calc(33.333333% - 20px);
     margin: 10px;
     outline: none;
-	display: block;
-    .portada{
-        img{
+    display: block;
+    .portada {
+        img {
             border-radius: 5px;
             object-fit: cover;
             width: 100%;
             cursor: pointer;
         }
-    }   
+    }
     .anime_name {
         position: relative;
         bottom: 0;

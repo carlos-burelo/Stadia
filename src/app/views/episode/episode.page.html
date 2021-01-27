@@ -1,45 +1,41 @@
 <ion-header>
-  <!-- <ion-toolbar>
-    
-    <ion-title><ion-icon name="arrow-back-outline"></ion-icon>{{title}}</ion-title>
-  </ion-toolbar> -->
-  <ion-toolbar>
-    <ion-buttons slot="start" [routerLink]="['/home']" >
-      <ion-icon name="arrow-back-outline"></ion-icon>
-    </ion-buttons>
-    <ion-title>{{title}}</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start" [routerLink]="['/home']">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title>{{title}}</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="episode-container">
-    <div class="servers-container">
-      <div class="servers">
-        <button (click)="getVideo(i.video)" *ngFor="let i of videos;" class="btn-server">
-          <ion-icon name="play-outline"></ion-icon>{{i.videoname}}
-        </button>
-      </div>
+    <div class="episode-container">
+        <div class="servers-container">
+            <div class="servers">
+                <button (click)="getVideo(i.video)" *ngFor="let i of videos;" class="btn-server">
+                    <ion-icon name="play"></ion-icon>{{i.videoname}}
+                </button>
+            </div>
+        </div>
+        <div class="cap_number">
+            <h4> Capitulo {{ep}}</h4>
+        </div>
+        <div class="video-player" (click)="unlock()">
+            <iframe [src]="videourlSafe" scrolling="no" allowfullscreen frameborder="0">
+            </iframe>
+            <div class="bg-wait" *ngIf="waiting == true">
+                <ion-icon name="alarm-outline"></ion-icon>
+                <p>Select any server & click me</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button (click)="backButton(ep)" *ngIf="btn_back == true" class="prev-button"><ion-icon name="chevron-back-outline"></ion-icon></button>
+            <button class="all-episodes" [routerLink]="['/anime', animeId]"><ion-icon name="list-outline"></ion-icon></button>
+            <button (click)="nextButton(ep)" *ngIf="btn_next == true" class="next-button"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+        </div>
+        <div class="downloads">
+            <a *ngFor="let i of downloads;" class="btn-server" [href]="i.link" target="_blank">
+                <ion-icon name="cloud-download"></ion-icon>{{i.server}}
+            </a>
+        </div>
     </div>
-    <div class="cap_number">
-      <h4> Capitulo {{ep}}</h4>
-    </div>
-    <div class="video-player" (click)="unlock()">
-      <iframe [src]="videourlSafe" allowfullscreen frameborder="0" >
-      </iframe>
-      <div class="bg-wait" *ngIf="waiting == true" >
-        <ion-icon name="alarm-outline"></ion-icon>
-        <p>Select any server & click me</p>
-      </div>
-    </div>
-    <div class="controls">
-      <button (click)="backButton(ep)" *ngIf="btn_back == true" class="prev-button"><ion-icon name="chevron-back-outline"></ion-icon></button>
-      <button class="all-episodes" [routerLink]="['/anime', animeId]" ><ion-icon name="list-outline"></ion-icon></button>
-      <button (click)="nextButton(ep)" *ngIf="btn_next == true" class="next-button"><ion-icon name="chevron-forward-outline"></ion-icon></button>
-    </div>
-    <div class="downloads">
-      <button (click)="getVideo(i.video)" *ngFor="let i of downloads;" class="btn-server">
-        <ion-icon name="play-outline"></ion-icon>{{i.server}}
-      </button>
-    </div>
-  </div>
 </ion-content>
