@@ -4,8 +4,8 @@
     "theme_color": "#000000",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "./",
-    "start_url": "./",
+    "scope": "https://carlos-burelo.github.io/Stadia/home",
+    "start_url": "https://carlos-burelo.github.io/Stadia/home",
     "icons": [{
         "src": "assets/icon/logo.png",
         "sizes": "512x512",

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1611714411646,
+  "timestamp": 1611718894211,
   "index": "https://carlos-burelo.github.io/Stadia/index.html",
   "assetGroups": [
     {
@@ -298,7 +298,7 @@
     "https://carlos-burelo.github.io/Stadia/69-es5.ec1606929a17286b3d74.js": "fb88921e8f44d7661da3046138c3edc5a71983c3",
     "https://carlos-burelo.github.io/Stadia/70-es2015.1aec31ec23df9c15a192.js": "f343c3982663a8e03e929b4db7f8b7ccd82cf5e4",
     "https://carlos-burelo.github.io/Stadia/70-es5.1aec31ec23df9c15a192.js": "d58f1e71f5aca41f8f6f202cc5d4cfbd68890f37",
-    "https://carlos-burelo.github.io/Stadia/assets/icon/logo.png": "6e055eab2f0a6d2e6b135189f93b830910f0ab9f",
+    "https://carlos-burelo.github.io/Stadia/assets/icon/logo.png": "f66288cc0ae6441c82d160ce02320ca9e354d171",
     "https://carlos-burelo.github.io/Stadia/assets/public.json": "838cc06c94fb2b8ae14e44dfa2b23342ca84ad13",
     "https://carlos-burelo.github.io/Stadia/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "https://carlos-burelo.github.io/Stadia/assets/src/not_found.gif": "490c87f32995a66facbf470e119f6babf05783ae",
@@ -307,7 +307,7 @@
     "https://carlos-burelo.github.io/Stadia/index.html": "0637a3c38764686cefe5ffa48c4e0c5ee1af339f",
     "https://carlos-burelo.github.io/Stadia/main-es2015.34acea2eb41690b2eb7e.js": "985cf8b48ac29bf083886710968f4ee7e7aba774",
     "https://carlos-burelo.github.io/Stadia/main-es5.34acea2eb41690b2eb7e.js": "b71cd87051146537455db5c4889aff19fb656113",
-    "https://carlos-burelo.github.io/Stadia/manifest.webmanifest": "6eca89ceff2151484e058f14b0b36f3ca8a396c4",
+    "https://carlos-burelo.github.io/Stadia/manifest.webmanifest": "bf84e59416a6596054a28b924089707e98671a1c",
     "https://carlos-burelo.github.io/Stadia/polyfills-core-js-es2015.889538a5be7d1852e8ce.js": "f71279ef311f3c1cecc661b8aabe632959a282f8",
     "https://carlos-burelo.github.io/Stadia/polyfills-core-js-es5.889538a5be7d1852e8ce.js": "ef94a2815cc399cb7888d8fbab75ea5fbdc275b3",
     "https://carlos-burelo.github.io/Stadia/polyfills-css-shim-es2015.4f3e86766116a7caf92e.js": "2242057728a39feab438a4710d9ceb2c50052ce2",
