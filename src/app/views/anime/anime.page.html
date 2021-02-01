@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
-        <ion-buttons slot="start" [routerLink]="['/directory']">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="directory"></ion-back-button>
         </ion-buttons>
         <ion-title>{{anime?.title}}</ion-title>
     </ion-toolbar>
@@ -27,6 +27,7 @@
                             <ion-icon name="play"></ion-icon> {{anime?.status}}</div>
                         <div class="date">
                             <ion-icon name="calendar"></ion-icon> {{anime?.date}}</div>
+                        <div class="add_fav" (click)="addToFavorite(anime)">Add to favorite</div>
                     </div>
                 </div>
             </div>

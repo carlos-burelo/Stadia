@@ -1,32 +1,40 @@
+@import '../../../theme/variables.scss';
 $background: #000000;
 .user_card_container {
     display: flex;
     align-items: center;
-    width: 92%;
+    width: 90%;
     margin: auto;
     img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         object-fit: cover;
         border-radius: 50%;
     }
     .user_info {
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 15px;
+        .user_email {
+            margin: 0;
+            color: $subtext;
+            overflow: hidden;
+            width: 100%;
+            text-overflow: ellipsis;
+        }
     }
 }
 
-ion-list-header,
-ion-list,
-ion-item,
-.item-native,
-ion-label {
-    background-color: #000000!important;
-}
-
+// ion-list-header,
+// ion-list,
+// ion-item,
+// .item-native,
+// ion-label {
+//     background-color: #000000!important;
+// }
 ion-avatar {
     display: flex;
     justify-content: center;
@@ -41,4 +49,17 @@ ion-avatar {
         align-items: center;
         vertical-align: middle;
     }
+}
+
+.alert-wrapper.ion-overlay-wrapper.sc-ion-alert-md,
+.alert-wrapper.sc-ion-alert-md {
+    background: #050505!important;
+}
+
+
+/* Set the width to the full container and center the content */
+
+ion-select {
+    width: 100%;
+    justify-content: center;
 }

@@ -21,7 +21,7 @@ export class HomePage implements OnInit {
     setTimeout(() => {
       this.getLastest()
       event.target.complete();
-    }, 1000);
+    });
     
   }
 }

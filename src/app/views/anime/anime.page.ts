@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnimeService } from '../../service/anime.service';
+import { LocalStorageService } from '../../service/localStorage.service';
 import { AnimeI } from '../../models/anime';
 
 @Component({
@@ -10,7 +11,13 @@ import { AnimeI } from '../../models/anime';
 })
 export class AnimePage implements OnInit {
   anime: AnimeI;
-  constructor( public apiSvc: AnimeService, private route: ActivatedRoute) { }
+  favorite: any;
+  favoriteString: boolean = false;
+  constructor( 
+    public apiSvc: AnimeService, 
+    public db: LocalStorageService, 
+    private route: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
     this.getAnime();
@@ -26,7 +33,9 @@ export class AnimePage implements OnInit {
       this.getAnime();
       event.target.complete();
     }, 1000);
-    
   }
 
+  addToFavorite(anime:any){
+    this.db.addToFav(anime);
+  }
 }

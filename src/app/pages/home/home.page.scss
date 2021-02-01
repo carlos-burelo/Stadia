@@ -1,25 +1,40 @@
-
 @import '../../../theme/variables.scss';
-.episode_card{
+.episode_card {
     width: 100%;
     display: flex;
     border-radius: $min-radius;
     margin-bottom: 13px;
     height: 80px;
-    &:focus{
+    &:focus {
         outline: none;
     }
-    .episode_card_img{
+    .episode_card_img {
         width: 45%;
+        position: relative;
         height: 100%;
-        img{
+        img {
+            position: absolute;
+            top: 0;
             width: 100%;
             object-fit: cover;
             border-radius: $min-radius;
             height: 100%;
         }
+        .episode_tooltip {
+            line-height: 0;
+            display: flex;
+            align-items: center;
+            border-radius: 0px 15px 15px 5px;
+            position: absolute;
+            bottom: 0;
+            width: 30%;
+            text-align: right;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+        }
     }
-    .episode_card_info{
+    .episode_card_info {
         width: 65%;
         display: flex;
         flex-direction: column;
@@ -27,23 +42,26 @@
         padding: 5px 10px;
         // background: $card;
         border-radius: 0 $min-radius $min-radius 0;
-        li{
+        li {
             list-style: none;
             .episode_card_numero,
             .episode_card_tipo {
                 font-weight: 400;
                 color: $subtitle;
             }
-            .episode_card_title{
+            .episode_card_title {
                 font-weight: 500;
                 color: $text;
+                p {
+                    margin: 0;
+                }
             }
-            div{
+            div {
                 font-size: 13.5px;
                 display: flex;
                 align-items: center;
                 vertical-align: middle;
-                mark{
+                mark {
                     color: $tool;
                     background-color: transparent;
                     font-weight: 500;
@@ -51,7 +69,6 @@
                     margin-left: 10px;
                 }
             }
-
         }
     }
 }

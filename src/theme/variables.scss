@@ -4,7 +4,19 @@
 /** Ionic CSS Variables **/
 
 $main: #1397d5;
+$tool: #0098df;
+$text: #ffffff;
+$primary: #000000;
+$secondary: #050505;
+$subtitle: #747474;
+$subtext: #8d8d8d;
+$card: #0c0c0c;
+$button: #1d1d1d;
+$min-radius: 5px;
+$mid-raduis: 10px;
+$max-radius: 20px;
 :root {
+    --main: #1397d5;
     /** primary **/
     --ion-color-primary: #1397d5;
     --ion-color-primary-rgb: 56, 128, 255;
@@ -204,18 +216,18 @@ body {
     --ion-toolbar-background: #000000;
     --ion-tab-bar-background: #000000;
     --ion-card-background: #000000;
+    --tool: #0098df;
+    --text: #ffffff;
+    --primary: #000000;
+    --secondary: #050505;
+    --subtitle: #747474;
+    --subtext: #aaaaaa;
+    --card: #0c0c0c;
+    --button: #1d1d1d;
+    --min-radius: 5px;
+    --mid-raduis: 10px;
+    --max-radius: 20px;
 }
 
 // }
 // @media (prefers-color-scheme: dark) {
-$tool: #0098df;
-$text: #ffffff;
-$primary: #000000;
-$secondary: #050505;
-$subtitle: #747474;
-$subtext: #aaaaaa;
-$card: #0c0c0c;
-$button: #1d1d1d;
-$min-radius: 5px;
-$mid-raduis: 10px;
-$max-radius: 20px;
