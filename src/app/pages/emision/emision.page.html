@@ -6,31 +6,35 @@
         <ion-title>Emision</ion-title>
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    <div class="anime_container">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+        <ion-refresher-content>
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-content>
+        <div class="anime_container">
 
-        <div class="anime_card" *ngFor="let a of page1?.animes" [routerLink]="['/anime', a.id]">
-            <div class="portada">
-                <img [src]="a.img">
-                <div class="anime_name">{{a.title}}</div>
-                <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+            <div class="anime_card" *ngFor="let a of page1?.animes" [routerLink]="['/anime', a.id]">
+                <div class="portada">
+                    <img [src]="a.img">
+                    <div class="anime_name">{{a.title}}</div>
+                    <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                </div>
             </div>
-        </div>
-        <div class="anime_card" *ngFor="let a of page2?.animes" [routerLink]="['/anime', a.id]">
-            <div class="portada">
-                <img [src]="a.img">
-                <div class="anime_name">{{a.title}}</div>
-                <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+            <div class="anime_card" *ngFor="let a of page2?.animes" [routerLink]="['/anime', a.id]">
+                <div class="portada">
+                    <img [src]="a.img">
+                    <div class="anime_name">{{a.title}}</div>
+                    <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                </div>
             </div>
-        </div>
-        <div class="anime_card" *ngFor="let a of page3?.animes" [routerLink]="['/anime', a.id]">
-            <div class="portada">
-                <img [src]="a.img">
-                <div class="anime_name">{{a.title}}</div>
-                <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+            <div class="anime_card" *ngFor="let a of page3?.animes" [routerLink]="['/anime', a.id]">
+                <div class="portada">
+                    <img [src]="a.img">
+                    <div class="anime_name">{{a.title}}</div>
+                    <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                </div>
             </div>
-        </div>
 
-    </div>
-</ion-content>
+        </div>
+    </ion-content>

@@ -58,6 +58,15 @@ export class DirectoryPage implements OnInit {
     return  await loading.present();
     const { role, data } = await loading.onDidDismiss();
   }
-
+  doRefresh(event){
+    setTimeout(() => {
+      this.getLastest();
+      this.getOvas();
+      this.getMovies();
+      this.getAnimes();
+      event.target.complete();
+    });
+    
+  }
 
 }

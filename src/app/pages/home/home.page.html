@@ -14,9 +14,9 @@
     <div class="container">
         <div class="episode_card" *ngFor="let a of lastest" [routerLink]="['/ver',a.id]">
             <div class="episode_card_info">
-                <!-- <li>
+                <li>
                     <div class="episode_card_numero">Capitulo <mark>{{a.nEpisode}}</mark></div>
-                </li> -->
+                </li>
                 <li>
                     <div class="episode_card_title">
                         <p>{{a.title}}</p>
@@ -26,7 +26,7 @@
             </div>
             <div class="episode_card_img">
                 <img [src]="a.img" [alt]="a.title">
-                <div class="episode_tooltip">{{a.nEpisode}}</div>
+                <!-- <div class="episode_tooltip">{{a.nEpisode}}</div> -->
             </div>
         </div>
 

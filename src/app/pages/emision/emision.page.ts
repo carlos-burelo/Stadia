@@ -32,4 +32,13 @@ export class EmisionPage implements OnInit {
       this.page3 = res;
     });
   }
+  doRefresh(event){
+    setTimeout(() => {
+      this.getPage1();
+      this.getPage2();
+      this.getPage3();
+      event.target.complete();
+    });
+    
+  }
 }

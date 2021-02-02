@@ -3,83 +3,87 @@
         <ion-title>Directory</ion-title>
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    <div class="emision_container">
-        <div class="section_directory">
-            <div class="title_section">
-                <ion-icon name="flame"></ion-icon> Emision</div>
-            <ion-button color="light" routerLink="/emision" slot="end">
-                <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
-        </div>
-        <div class="slider">
-            <div class="slides">
-                <div class="emision_card" *ngFor="let a of emision?.animes" [routerLink]="['/anime', a.id]">
-                    <div class="portada">
-                        <img [src]="a.img">
-                        <div class="anime_name">{{a.title}}</div>
-                        <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
+        <ion-refresher-content>
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-content>
+        <div class="emision_container">
+            <div class="section_directory">
+                <div class="title_section">
+                    <ion-icon name="flame"></ion-icon> Emision</div>
+                <ion-button color="light" routerLink="/emision" slot="end">
+                    <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <div class="emision_card" *ngFor="let a of emision?.animes" [routerLink]="['/anime', a.id]">
+                        <div class="portada">
+                            <img [src]="a.img">
+                            <div class="anime_name">{{a.title}}</div>
+                            <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="movies_container">
-        <div class="section_directory">
-            <div class="title_section">
-                <ion-icon name="film"></ion-icon> Peliculas</div>
-            <ion-button color="light" [routerLink]="['/category/pelicula']" slot="end">
-                <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
-        </div>
-        <div class="slider">
-            <div class="slides">
-                <div class="emision_card" *ngFor="let a of movies?.animes" [routerLink]="['/anime', a.id]">
-                    <div class="portada">
-                        <img [src]="a.img">
-                        <div class="anime_name">{{a.title}}</div>
-                        <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+        <div class="movies_container">
+            <div class="section_directory">
+                <div class="title_section">
+                    <ion-icon name="film"></ion-icon> Peliculas</div>
+                <ion-button color="light" [routerLink]="['/category/pelicula']" slot="end">
+                    <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <div class="emision_card" *ngFor="let a of movies?.animes" [routerLink]="['/anime', a.id]">
+                        <div class="portada">
+                            <img [src]="a.img">
+                            <div class="anime_name">{{a.title}}</div>
+                            <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="ovas_container">
-        <div class="section_directory">
-            <div class="title_section">
-                <ion-icon name="easel"></ion-icon> Ovas</div>
-            <ion-button color="light" [routerLink]="['/category/ova']" slot="end">
-                <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
-        </div>
-        <div class="slider">
-            <div class="slides">
-                <div class="emision_card" *ngFor="let a of ovas?.animes" [routerLink]="['/anime', a.id]">
-                    <div class="portada">
-                        <img [src]="a.img">
-                        <div class="anime_name">{{a.title}}</div>
-                        <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+        <div class="ovas_container">
+            <div class="section_directory">
+                <div class="title_section">
+                    <ion-icon name="easel"></ion-icon> Ovas</div>
+                <ion-button color="light" [routerLink]="['/category/ova']" slot="end">
+                    <ion-icon name="caret-forward"></ion-icon> Ver mas</ion-button>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <div class="emision_card" *ngFor="let a of ovas?.animes" [routerLink]="['/anime', a.id]">
+                        <div class="portada">
+                            <img [src]="a.img">
+                            <div class="anime_name">{{a.title}}</div>
+                            <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="animes_container">
-        <div class="section_directory">
-            <div class="title_section">
-                <ion-icon name="happy"></ion-icon> Animes</div>
-            <ion-button color="light" [routerLink]="['/category/anime']" slot="end">
-                <ion-icon name="caret-forward"></ion-icon> Ver mas
-            </ion-button>
-        </div>
-        <div class="slider">
-            <div class="slides">
-                <div class="emision_card" *ngFor="let a of anime?.animes" [routerLink]="['/anime', a.id]">
-                    <div class="portada">
-                        <img [src]="a.img">
-                        <div class="anime_name">{{a.title}}</div>
-                        <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+        <div class="animes_container">
+            <div class="section_directory">
+                <div class="title_section">
+                    <ion-icon name="happy"></ion-icon> Animes</div>
+                <ion-button color="light" [routerLink]="['/category/anime']" slot="end">
+                    <ion-icon name="caret-forward"></ion-icon> Ver mas
+                </ion-button>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <div class="emision_card" *ngFor="let a of anime?.animes" [routerLink]="['/anime', a.id]">
+                        <div class="portada">
+                            <img [src]="a.img">
+                            <div class="anime_name">{{a.title}}</div>
+                            <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</ion-content>
+    </ion-content>

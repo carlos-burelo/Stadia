@@ -2,44 +2,35 @@
 
 ## Monoschinos Unoficial PWA
 
+![Banner1](./docs/banner1.webp "Paginas")
 
-<div style="display:flex">
-    <img src="./docs/a1.png" width="19.5%">
-    <img src="./docs/a2.png" width="19.5%">
-    <img src="./docs/a3.png" width="19.5%">
-    <img src="./docs/a4.png" width="19.5%">
-    <img src="./docs/a5.png" width="19.5%">
-</div>
+## What is Stadia?
 
-This project was generated with:
+Stadia is an open source project that allows you to view the content of the monoschinos2.com page in the application format, with the purpose of making the visualization and location of the content of the page in question more comfortable
 
-* [Angular](https://angular.io) version 10.0.0.
+![Banner2](./docs/banner2.webp "Vistas")
+
+## How does it work?.
+
+A REST API was developed in conjunction with another developer, who using the Web Scraping concept, extracts the necessary data from the original page and returns them as objects or arrays of objects so that the Front -End can interpret it and later print it on screen.
+
+Using Angular as a Front-end framework and being a single page Application, it renders in real time the content it receives from the API on the same page.
+
+#### Original api credits to: **atleugim**
+
+
+
+## Designed for simplicity.
+
+Thought to have a friendly interface and a comfortable user experience, it was decided Use the Netflix platform interface as a reference for greater convenience, but make no mistake, Stadia keeps details of the same application
+
+
+
+#### This project was generated with:
+
+* [Angular](https://angular.io) version 11.0.0.
 * [Ionic](https://ionic.io/) version 5.0.0
 
-## Development server
-
-```
-    npm run dev
-```
-
-Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-```
-    ionic generate
-```
-
-You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-```
-    ng build --prod
-```
-
-The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Author
-
 ### Carlos Burelo

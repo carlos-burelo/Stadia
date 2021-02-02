@@ -7,6 +7,7 @@ import { AnimeService } from '../../service/anime.service'
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  public res : any;
   public lastest : any;
   constructor(public apiSvc: AnimeService) { }
   ngOnInit(): void {
@@ -14,7 +15,9 @@ export class HomePage implements OnInit {
   }
   getLastest(){
     this.apiSvc.getLastest().subscribe( lastest => {
-      this.lastest = lastest;
+
+      this.res = lastest;
+      this.lastest = this.res?.animes;
     });
   }
   doRefresh(event){
