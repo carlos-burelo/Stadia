@@ -1,0 +1,7 @@
+{
+  "name": "stadia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
