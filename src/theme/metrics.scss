@@ -1,0 +1,10 @@
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+@mixin text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

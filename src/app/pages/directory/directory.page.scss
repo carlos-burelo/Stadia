@@ -1,0 +1,108 @@
+.header-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-name {
+    display: flex;
+    align-items: center;
+}
+
+.header-section {
+    ion-button {
+        padding: 5px;
+    }
+    .section-name {
+        ion-icon {
+            margin-right: 5px;
+            font-size: 15px;
+        }
+    }
+}
+
+.anime-carousel {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    transition: all ease .5s
+}
+
+.anime-card-carousel {
+    scroll-snap-align: start;
+    transition: all ease .5s;
+    flex-shrink: 0;
+    width: 26%;
+    height: 100%;
+    margin: 0px 8px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 1s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.portada {
+    height: 100%;
+    width: 100%;
+    img {
+        border-radius: 5px;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .anime_name {
+        position: relative;
+        bottom: 18px;
+        font-size: 12px;
+        height: 20px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .anime_info {
+        position: relative;
+        bottom: 20px;
+        font-size: 12px;
+        height: 20px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        mark {
+            background-color: var(--ion-color-primary);
+            color: #fff;
+            padding: 1px 6px;
+            margin: 0;
+            line-height: normal;
+            border-radius: 10px;
+        }
+    }
+}
+
+.emision {
+    color: #ffb30e;
+}
+
+.ovas {
+    color: #06b572;
+}
+
+.movies {
+    color: #0c8ed5;
+}
+
+.animes {
+    color: #bd2727;
+}

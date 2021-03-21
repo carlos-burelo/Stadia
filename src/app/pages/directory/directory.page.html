@@ -1,0 +1,82 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Directorio</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <section id="Emision">
+            <div class="header-section">
+                <div class="section-name">
+                    <ion-icon name="flame" class="emision"></ion-icon>
+                    <h5>Emision</h5>
+                </div>
+                <ion-button size="default" mode="ios">Ver mas</ion-button>
+            </div>
+            <div class="anime-carousel">
+                <div class="anime-card-carousel" *ngFor="let a of emision?.animes" [routerLink]="['/anime/'+ a.id]">
+                    <div class="portada">
+                        <img [src]="a.img">
+                        <div class="anime_name">{{a.title}}</div>
+                        <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Ovas">
+            <div class="header-section">
+                <div class="section-name">
+                    <ion-icon name="tv" class="ovas"></ion-icon>
+                    <h5>Ovas</h5>
+                </div>
+                <ion-button size="default" mode="ios">Ver mas</ion-button>
+            </div>
+            <div class="anime-carousel">
+                <div class="anime-card-carousel" *ngFor="let a of ovas?.animes" [routerLink]="['/anime/'+ a.id]">
+                    <div class="portada">
+                        <img [src]="a.img">
+                        <div class="anime_name">{{a.title}}</div>
+                        <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Peliculas">
+            <div class="header-section">
+                <div class="section-name">
+                    <ion-icon name="videocam" class="movies"></ion-icon>
+                    <h5>Peliculas</h5>
+                </div>
+                <ion-button size="default" mode="ios">Ver mas</ion-button>
+            </div>
+            <div class="anime-carousel">
+                <div class="anime-card-carousel" *ngFor="let a of movies?.animes" [routerLink]="['/anime/'+ a.id]">
+                    <div class="portada">
+                        <img [src]="a.img">
+                        <div class="anime_name">{{a.title}}</div>
+                        <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Animes">
+            <div class="header-section">
+                <div class="section-name">
+                    <ion-icon name="happy" class="animes"></ion-icon>
+                    <h5>Animes</h5>
+                </div>
+                <ion-button size="default" mode="ios">Ver mas</ion-button>
+            </div>
+            <div class="anime-carousel">
+                <div class="anime-card-carousel" *ngFor="let a of anime?.animes" [routerLink]="['/anime/'+ a.id]">
+                    <div class="portada">
+                        <img [src]="a.img">
+                        <div class="anime_name">{{a.title}}</div>
+                        <div class="anime_info">{{a.category}} <mark>{{a.year}}</mark> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</ion-content>

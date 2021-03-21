@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" [routerLink]="['/home']">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-buttons>
+        <ion-title>{{episode?.title}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="episode-container">
+        <div class="servers-container">
+            <h6 class="down_title">Seleccione cualquier servidor</h6>
+            <div class="servers">
+                <button (click)="getVideo(i.video)" *ngFor="let i of episode?.videos;" class="btn-server">
+                    <ion-icon name="play"></ion-icon>{{i.videoname}}
+                </button>
+            </div>
+        </div>
+        <div class="cap_number">
+            <h4> Episodio {{episode?.epNumber}}</h4>
+        </div>
+        <div class="video-player" id="iframe">
+
+        </div>
+        <div class="controls">
+            <button (click)="backButton(ep)" *ngIf="btn_back == true" class="prev-button"><ion-icon name="chevron-back-outline"></ion-icon></button>
+            <button class="all-episodes" [routerLink]="['/anime', animeId]"><ion-icon name="list-outline"></ion-icon></button>
+            <button (click)="nextButton(ep)" *ngIf="btn_next == true" class="next-button"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+        </div>
+        <div class="downloads">
+            <h6 class="down_title">Downloads</h6>
+            <a class="item_donw" target="_blank" attr.href="{{d.link}}" *ngFor="let d of episode?.downloads; index as i">
+                <div class="down_number">{{i+1}}</div>
+                <div class="down_name">{{d.server}}</div>
+                <div class="donw_link">
+                    <ion-icon name="cloud-download">{{d.link}}</ion-icon>
+                </div>
+            </a>
+        </div>
+    </div>
+</ion-content>

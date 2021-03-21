@@ -1,0 +1,27 @@
+<ion-header>
+    <div class="container">
+        <ion-toolbar class="search_bar">
+            <ion-searchbar (ionChange)="searchAnime($event)" showCancelButton="focus" debounce=1500></ion-searchbar>
+        </ion-toolbar>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="results_container" *ngIf="rContainer == true;">
+        <div class="anime_container">
+            <div class="not_results" *ngIf="result?.animes == 0;">
+                <img src="../../../assets/src/not_found.gif" alt="Not Found">
+                <p>No hay resultados</p>
+            </div>
+            <div class="anime_card" *ngFor="let a of result?.animes" [routerLink]="['/anime', a.id]">
+                <div class="portada">
+                    <img [src]="a.img">
+                    <div class="anime_name">{{a.title}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search_off" *ngIf="rContainer == false;">
+        <button [routerLink]="['/gender', g.id]" *ngFor="let g of genders?.genders"><h6>{{g.title}}</h6></button>
+    </div>
+</ion-content>

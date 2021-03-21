@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Capitulos recientes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="episode-recents-container">
+            <div class="episode-card" *ngFor="let a of anime" [routerLink]="['/ver/'+ a.id]">
+                <div class="episode-info">
+                    <li>
+                        <div class="episode-number">Episodio <mark>{{a.nEpisode}}</mark></div>
+                    </li>
+                    <li>
+                        <div class="episode-title">
+                            <p>{{a.title}}</p>
+                        </div>
+                        <div class="episode-type">{{a.type}}</div>
+                    </li>
+                </div>
+                <div class="episode-image">
+                    <img [src]="a.img" [alt]="a.title">
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!anime">
+            <ion-list>
+                <ion-item *ngFor="let item of skeleton">
+                    <ion-thumbnail slot="end">
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-thumbnail>
+                    <ion-label>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                        </p>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+
+
+
+            </ion-list>
+        </div>
+    </div>
+
+
+
+
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="refresh()">
+            <ion-icon name="refresh"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

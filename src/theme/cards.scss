@@ -1,0 +1,55 @@
+@import './metrics.scss';
+.episode-card {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 13px;
+    // height: 85px;
+    .episode-image {
+        width: 35%;
+        position: relative;
+        height: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            height: 100%;
+        }
+    }
+    .episode-info {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 10px 5px 0;
+        border-radius: 0 5px 5px 0;
+        li {
+            list-style: none;
+            .episode-number, .episode-type {
+                font-weight: 400;
+                // color: #fff;
+            }
+            .episode-title {
+                font-weight: 500;
+                // color: #fff;
+                margin: 3px 0;
+                p {
+                    margin: 0;
+                }
+            }
+            div {
+                font-size: 13.5px;
+                display: flex;
+                align-items: center;
+                vertical-align: middle;
+                mark {
+                    color: var(--ion-color-primary);
+                    background-color: transparent;
+                    font-weight: 500;
+                    border-radius: 2px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
