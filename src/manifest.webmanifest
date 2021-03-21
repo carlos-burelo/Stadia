@@ -1,0 +1,15 @@
+{
+    "name": "Stadia",
+    "short_name": "Stadia",
+    "theme_color": "#00000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "https://appstadia.netlify.app",
+    "start_url": "https://appstadia.netlify.app",
+    "icons": [{
+        "src": "assets/icon/logo.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable any"
+    }]
+}
