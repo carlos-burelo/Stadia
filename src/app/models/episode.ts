@@ -9,7 +9,16 @@ export interface EpisodeInterface {
     downloads?: any,
     videos?: any,
 }
-export interface EpisodeArray {
+export interface EpisodeArray  { 
     animes?: Array<EpisodeInterface>,
     success?: any
+}
+
+export interface EpisodeI {
+    title?: string
+    animeId?: string
+    epNumber?: number
+    videos?: Array<any>
+    downloads?: Array<any>
+    success: boolean
 }

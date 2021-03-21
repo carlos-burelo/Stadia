@@ -11,8 +11,16 @@ import { AnimeI } from '../../models/anime';
 })
 export class AnimePage implements OnInit {
   anime: AnimeI;
+  fav = false
   favorite: any;
   favoriteString: boolean = false;
+  segmentModel = "informacion";
+
+  slideOpts = {
+    slidesPerView: 5,
+    // initialSlide: 1,
+    speed: 400
+  };
   constructor( 
     public apiSvc: AnimeService, 
     public db: LocalStorageService, 
@@ -34,8 +42,12 @@ export class AnimePage implements OnInit {
       event.target.complete();
     }, 1000);
   }
-
+  segmentChanged(event){
+    console.log(this.segmentModel);
+    
+    console.log(event);
+  }
   addToFavorite(anime:any){
-    this.db.addToFav(anime);
+    // this.db.addToFav(anime);
   }
 }

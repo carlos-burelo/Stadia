@@ -26,6 +26,7 @@ export class HomePage implements OnInit {
   }
   async refresh(){
     if(this.anime){
+      this.getEpisodes();
       const toast = await this.toastController.create({
         header: 'Lista de animes actualizada',
         animated: true,

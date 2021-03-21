@@ -53,6 +53,8 @@ export class EpisodePage implements OnInit {
     // iframe.allowFullscreen;
     iframe.height = "100%";
     iframe.id = "iframeid";
+    iframe.style.border = "0"
+    iframe.style.borderRadius = "5px"
     iframe.setAttribute('allowFullscreen', '')
     document.getElementById("iframe").appendChild(iframe);
     console.clear()
@@ -98,6 +100,8 @@ export class EpisodePage implements OnInit {
     iframe.height = "100%"
     iframe.allowFullscreen = true
     iframe.id = "iframeid"
+    iframe.style.border = "0"
+    iframe.style.borderRadius = "5px"
     document.getElementById("iframe").appendChild(iframe);
     console.clear()
   }

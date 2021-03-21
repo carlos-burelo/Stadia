@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'gender/:id',
     loadChildren: () => import('./views/gender/gender.module').then( m => m.GenderPageModule)
   },
+  {
+    path: 'emision',
+    loadChildren: () => import('./views/emision/emision.module').then( m => m.EmisionPageModule)
+  },
 ];
 @NgModule({
   imports: [

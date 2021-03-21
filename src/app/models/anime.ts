@@ -1,4 +1,5 @@
 export interface AnimeI {
+    id: string
     title?: string,
     banner?: string,
     description?: string,
