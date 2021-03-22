@@ -53,3 +53,42 @@
         }
     }
 }
+
+ion-title {
+    text-transform: uppercase;
+}
+
+.anime_container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.anime_card {
+    width: calc(33.333333% - 20px);
+    // height: 180px;
+    margin: 10px;
+    outline: none;
+    display: block;
+    .portada {
+        img {
+            height: 170px;
+            border-radius: 5px;
+            object-fit: cover;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+    .anime_name {
+        position: relative;
+        bottom: 0;
+        font-size: 12px;
+        height: 20px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

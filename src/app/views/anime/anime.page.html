@@ -33,8 +33,18 @@
                         <ion-icon name="play"></ion-icon> {{anime?.status}}</div>
                     <div class="date">
                         <ion-icon name="calendar"></ion-icon> {{anime?.date}}</div>
-                    <div class="add_fav" (click)="addToFavorite(anime)">
-                        <ion-icon [name]="fav == true  ? 'heart' : 'heart-outline' "></ion-icon>
+                    <div class="add_fav" (click)="toggleFavorite()">
+                        <div *ngIf="fav == true; else nofav" class="fav">
+                            <ion-icon name="heart" class="fav-active"></ion-icon>
+                            <h6 class="fav-active">Favorite</h6>
+                        </div>
+                        <ng-template #nofav class="fav">
+                            <div class="nofav">
+                                <ion-icon name="heart-outline" class="fav-inactive"></ion-icon>
+                                <h6>Add to favorite</h6>
+                            </div>
+                        </ng-template>
+
                     </div>
                 </div>
             </div>
@@ -73,79 +83,4 @@
             </div>
         </div>
     </div>
-
 </ion-content>
-
-
-<!-- <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-back-button defaultHref="directory"></ion-back-button>
-        </ion-buttons>
-        <ion-title>{{anime?.title}}</ion-title>
-    </ion-toolbar>
-</ion-header>
-<ion-content>
-    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.8" pullMin="60" pullMax="120">
-        <ion-refresher-content>
-        </ion-refresher-content>
-    </ion-refresher>
-    <ion-content>
-        <div class="anime_container">
-            <div class="info_container">
-                <div class="banner">
-                    <img [src]="anime?.banner" [alt]="anime?.title">
-                    <div class="bg-dark"></div>
-                </div>
-                <div class="details container">
-                    <img [src]="anime?.img" [alt]="anime?.title" class="portada">
-                    <div class="target">
-                        <div class="title">
-                            <ion-icon name="language"></ion-icon> {{anime?.title}}</div>
-                        <div class="status">
-                            <ion-icon name="play"></ion-icon> {{anime?.status}}</div>
-                        <div class="date">
-                            <ion-icon name="calendar"></ion-icon> {{anime?.date}}</div>
-                        <div class="add_fav" (click)="addToFavorite(anime)">
-                            <ion-icon [name]="fav == true  ? 'heart' : 'heart-outline' "></ion-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="genders">
-                <button class="gender" [routerLink]="['/gender/' + g.id]" *ngFor="let g of anime?.genders">{{g.title}}</button>
-            </div>
-            <div class="slides">
-
-                <div class="sinopsis">
-                    <div class="title_sinopsis">Sinopsis</div>
-                    <p class="text">{{anime?.description}}</p>
-                    <div class="title_suggestions">Suggestions</div>
-                    <div class="slider">
-                        <div class="slides-suggestions">
-                            <div class="emision_card" *ngFor="let a of anime?.sugestions" [routerLink]="['/anime/' + a.id]">
-                                <div class="portada">
-                                    <img [src]="a.img">
-                                    <div class="anime_name">{{a.title}}</div>
-                                    <div class="anime_info">{{a.type}} <mark>{{a.year}}</mark> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="episodes">
-                    <div class="title_episodes">Episodes</div>
-                    <div class="episode" [routerLink]="['/ver', e.id]" *ngFor="let e of anime?.episodes">
-                        <img [src]="anime?.banner" alt="">
-                        <div class="ep_number">Episodio {{e.episode}}</div>
-                    </div>
-                    <div *ngIf="anime?.episodes == 0" class="episode">
-                        No hay capitulos disponibles
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </ion-content> -->

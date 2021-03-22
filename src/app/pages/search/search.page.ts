@@ -23,7 +23,6 @@ export class SearchPage implements OnInit {
       console.log(this.word)
       this.apiSvc.searchAnime(this.word).subscribe((res: any) => {
         this.result = res;
-        console.log(this.result)
       });
   }
   getGender(){

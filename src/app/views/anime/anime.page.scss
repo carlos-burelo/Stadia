@@ -17,6 +17,30 @@ ion-segment-button {
     }
 }
 
+.fav, .nofav {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 5px;
+    width: fit-content;
+}
+
+.fav {
+    background-color: #e23854;
+    color: #fff;
+}
+
+.nofav {
+    background-color: #ffffff;
+    color: #000000;
+    h6 {
+        color: #000000;
+    }
+}
+
+// .fav-active {
+//     color: #e23854;
+// }
 .anime_container {
     width: 100%;
     // position: relative;

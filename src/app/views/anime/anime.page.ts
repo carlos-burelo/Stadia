@@ -16,24 +16,21 @@ export class AnimePage implements OnInit {
   favoriteString: boolean = false;
   segmentModel = "informacion";
 
-  slideOpts = {
-    slidesPerView: 5,
-    // initialSlide: 1,
-    speed: 400
-  };
   constructor( 
     public apiSvc: AnimeService, 
-    public db: LocalStorageService, 
+    public localStorageSvc: LocalStorageService, 
     private route: ActivatedRoute
     ) { }
 
   ngOnInit(): void {
     this.getAnime();
+    // this.checkFav()
   }
   getAnime(){
     const id = this.route.snapshot.params.id;
     this.apiSvc.getAnime(id).subscribe((res: any) => {
       this.anime = res;
+      this.checkFav(this.anime.id)
     });
   }
   doRefresh(event){
@@ -47,7 +44,17 @@ export class AnimePage implements OnInit {
     
     console.log(event);
   }
-  addToFavorite(anime:any){
-    // this.db.addToFav(anime);
+
+  checkFav(id:any){
+    const fav = JSON.parse(localStorage.getItem('favorites'));
+    const found = fav.find(i => i.id === id);
+    this.fav = found?.fav
+  }
+
+  toggleFavorite():void{
+    const fav = this.anime.fav;
+    this.anime.fav = !fav;
+    this.localStorageSvc.addOrRemove(this.anime);
+    this.getAnime()
   }
 }
